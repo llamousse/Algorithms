@@ -6,7 +6,18 @@ import sys
 # a solution that is more efficient than the naive 
 # recursive solution
 def eating_cookies(n, cache=None):
-  pass
+  # create base cases for recursive solution
+  if n == 0:
+    return 1
+  elif n == 1:
+    return n
+  elif n == 2: 
+    return 2
+
+  # recursive case (fibonacci)
+  return eating_cookies(n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
+
+  # test: eating_cookies(3) -> eating_cookies(2) + eating_cookies(1) + eating_cookies(0) = 4
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
