@@ -8,6 +8,18 @@ For example, given n = 2, your function should output the following:
 [['rock', 'rock'], ['rock', 'paper'], ['rock', 'scissors'], ['paper', 'rock'], ['paper', 'paper'], ['paper', 'scissors'], ['scissors', 'rock'], ['scissors', 'paper'], ['scissors', 'scissors']]
 ```
 
+<!-- 1: -->
+
+RPS(1) = [[rock], [paper], [scissors]]
+
+<!-- 2 -->
+
+RPS(2) = (Rock * RPS(1) + Paper * RPS(1) + Scissors * RPS(1)) = 
+[[rock,rock], [rock,paper], [rock,scissors]
+[paper,rock], [paper,paper], [paper,scissors]
+[scissors,rock], [scissors,paper], [scissors,scissors]]
+
+
 Your output should be a list of lists containing strings. Each inner list should have length equal to the input n.
 
 ## Testing
